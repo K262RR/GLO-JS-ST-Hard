@@ -15,12 +15,19 @@ if (lang == 'ru') {
 // Через switch
 switch (lang) {
     case 'ru':
-    console.log('Пн, Вт, Ср, Чт, Пт, Сб, Вс')
-      break
+        console.log('Пн, Вт, Ср, Чт, Пт, Сб, Вс')
+        break
     case 'en':
-    console.log('Mo, Tu, We, Thu, Fr, Sa, Su')
-    break
+        console.log('Mo, Tu, We, Thu, Fr, Sa, Su')
+        break
 }
 
 // Через многомерный ассоциативный массив
 console.log(voc[lang])
+
+
+const namePerson = 'Артем'
+
+result = (namePerson == 'Артем') ? 'директор' : (namePerson == 'Александр') ? 'преподаватель' : 'студент'
+
+console.log(result)
