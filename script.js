@@ -1,19 +1,26 @@
-num = 266219;
 
-const numArray = num.toString().split('');
-console.log(numArray);
+let lang = 'ru'
+const voc = {
+    'ru': ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', ],
+    'en': ['Mo', 'Tu', 'We', 'Thu', 'Fr', 'Sa', 'Su', ]
+}
 
-let sum = 1;
+// Через if
+if (lang == 'ru') {
+    console.log('Пн, Вт, Ср, Чт, Пт, Сб, Вс')
+} else if (lang == 'en') {
+    console.log('Mo, Tu, We, Thu, Fr, Sa, Su')
+}
 
-numArray.forEach(element => {
-    sum *= parseInt(element)
-    console.log('Сумма сейчас: ' + sum)
-});
+// Через switch
+switch (lang) {
+    case 'ru':
+    console.log('Пн, Вт, Ср, Чт, Пт, Сб, Вс')
+      break
+    case 'en':
+    console.log('Mo, Tu, We, Thu, Fr, Sa, Su')
+    break
+}
 
-sum = sum ** 3;
-console.log(sum);
-sum = sum.toString();
-let res = sum.substring(-1, 2);
-
-
-console.log(res);
+// Через многомерный ассоциативный массив
+console.log(voc[lang])
